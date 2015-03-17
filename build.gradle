@@ -39,12 +39,9 @@ dependencies {
 	
 	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
 	compile 'org.slf4j:slf4j-api:1.7.10'
-	compile 'commons-dbcp:commons-dbcp'
-	compile 'org.modelmapper:modelmapper:$modelMapperVersion'
-	compile 'org.projectlombok:lombok:$lombokVersion'
+
 	compile 'org.apache.directory.studio:org.apache.commons.lang:2.6'
 	compile 'org.springframework.data:spring-data-jpa:1.8.0.RC1'
-	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compile 'mysql:mysql-connector-java:5.1.26'
 	
 	
