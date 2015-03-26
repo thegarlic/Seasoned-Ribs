@@ -23,7 +23,7 @@ public class LoginService {
 			result = new LoginResultVo();
 			result.setSuccess( false );
 			result.setResultCode( 1 );
-			result.setMsg( "»ç¿ëÀÚ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			result.setMsg( "ì‚¬ìš©ìê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			return result;
 		}
 		
@@ -33,16 +33,16 @@ public class LoginService {
 		byte[] passwordDigester = PasswordUtil.PasswordDigester(userId, userPwd);
 		
 		if( Arrays.equals(password, passwordDigester) ){
-			// ÆĞ½º¿öµå ÀÏÄ¡ÇÔ. ÀÎÁõ ¼º°øÇÔ.  »ç¿ëÀÚ Á¤º¸¸¦ ¼¼¼Ç¿¡ ÀúÀåÇÏµµ·Ï ÇÏÀÚ. 
+			// íŒ¨ìŠ¤ì›Œë“œ ì¼ì¹˜í•¨. ì¸ì¦ ì„±ê³µí•¨.  ì‚¬ìš©ì ì •ë³´ë¥¼ ì„¸ì…˜ì— ì €ì¥í•˜ë„ë¡ í•˜ì. 
 			result = new LoginResultVo();
 			result.setSuccess( true );
 			return result;
 		} else {
-			// ÆĞ½º¿öµå°¡ Æ²¸².
+			// íŒ¨ìŠ¤ì›Œë“œê°€ í‹€ë¦¼.
 			result = new LoginResultVo();
 			result.setSuccess( false );
 			result.setResultCode( 2 );
-			result.setMsg("ÆĞ½º¿öµå°¡ Æ²¸³´Ï´Ù.");
+			result.setMsg("íŒ¨ìŠ¤ì›Œë“œê°€ í‹€ë¦½ë‹ˆë‹¤.");
 			return result;
 		}
 	}

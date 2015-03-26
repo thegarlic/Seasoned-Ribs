@@ -8,7 +8,7 @@ public class TestUtils {
 
 
 	@Test
-	public void ÆĞ½º¿öµå´Â_¾ÆÀÌµğ¸¦_salt_·ÎÇØ¼­_ÆĞ½º¿öµåÀÇ_hash°ªÀ»_¾ò¾î¿Â´Ù() {
+	public void íŒ¨ìŠ¤ì›Œë“œëŠ”_ì•„ì´ë””ë¥¼_salt_ë¡œí•´ì„œ_íŒ¨ìŠ¤ì›Œë“œì˜_hashê°’ì„_ì–»ì–´ì˜¨ë‹¤() {
 		String userId = "test1";
 		String pwd = "0123456789";
 		

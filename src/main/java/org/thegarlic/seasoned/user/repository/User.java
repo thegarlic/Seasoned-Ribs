@@ -10,7 +10,7 @@ public class User {
 
 	
 	
-	// »ç¿ëÀÚ id ¸¦ key ·Î ÇÑ´Ù. 
+	// ì‚¬ìš©ì id ë¥¼ key ë¡œ í•œë‹¤. 
 	@Id
 	private String userId;
 	

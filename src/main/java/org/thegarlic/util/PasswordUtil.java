@@ -6,9 +6,9 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  * 
- * ÆĞ½º¿öµå¸¦ ÀúÀåÇÒ ¶§¿¡´Â Æò¹®À» ÀúÀåÇÏÁö ¾Ê´Â´Ù.
+ * íŒ¨ìŠ¤ì›Œë“œë¥¼ ì €ì¥í•  ë•Œì—ëŠ” í‰ë¬¸ì„ ì €ì¥í•˜ì§€ ì•ŠëŠ”ë‹¤.
  * 
- * user id ¸¦ salt ·Î ÇÏ¿© ÆĞ½º¿öµå¿Í ÇÕÄ£ ÈÄ, sha-256 ´Ü¹æÇâ ÇØ½ÃÇÔ¼ö¸¦ »ç¿ëÇÏ¿© digest ¸¦ ¸¸µé¾î³½´Ù.
+ * user id ë¥¼ salt ë¡œ í•˜ì—¬ íŒ¨ìŠ¤ì›Œë“œì™€ í•©ì¹œ í›„, sha-256 ë‹¨ë°©í–¥ í•´ì‹œí•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ digest ë¥¼ ë§Œë“¤ì–´ë‚¸ë‹¤.
  * 
  * @author smlee
  *
@@ -17,11 +17,11 @@ public class PasswordUtil {
 
 	
 	/**
-	 * ÆĞ½º¿öµå À¯Æ¿
+	 * íŒ¨ìŠ¤ì›Œë“œ ìœ í‹¸
 	 * 
-	 * @param userId   »ç¿ëÀÚ id
-	 * @param pwd      »ç¿ëÀÚ pwd
-	 * @return         »ç¿ëÀÚ ID + PWD ¸¦ ÀÌ¿ëÇÏ¿© SHA-256 À¸·Î ÇØ½ÃÇÑ BYTE ¹è¿­À» ¹İÈ¯ 
+	 * @param userId   ì‚¬ìš©ì id
+	 * @param pwd      ì‚¬ìš©ì pwd
+	 * @return         ì‚¬ìš©ì ID + PWD ë¥¼ ì´ìš©í•˜ì—¬ SHA-256 ìœ¼ë¡œ í•´ì‹œí•œ BYTE ë°°ì—´ì„ ë°˜í™˜ 
 	 */
 	public static byte[] PasswordDigester( String userId , String pwd ) {
 		
@@ -33,7 +33,7 @@ public class PasswordUtil {
 			return digest;
 			
 		} catch (NoSuchAlgorithmException e) {
-			throw new RuntimeException("SHA-256 À» Áö¿øÇÏÁö ¾ÊÀ»ÁÙÀÌ¾ß....", e);
+			throw new RuntimeException("SHA-256 ì„ ì§€ì›í•˜ì§€ ì•Šì„ì¤„ì´ì•¼....", e);
 		}
 	}
 

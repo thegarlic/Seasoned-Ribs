@@ -34,19 +34,19 @@ public class TestLogin {
 		
 		userRepo.save( new User( 	"user1" , 
 									"Tom" , 
-									"Å©·çÁî" , 
+									"í¬ë£¨ì¦ˆ" , 
 									PasswordUtil.PasswordDigester( "user1", "pwd1" )));
 		
 		userRepo.save( new User( 	"user2" , 
 									"Anjellina" , 
-									"Á¹¸®" , 
+									"ì¡¸ë¦¬" , 
 									PasswordUtil.PasswordDigester( "user2", "pwd2" ) ));
 		
 	}
 	
 	
 	@Test
-	public void »ç¿ëÀÚ¸ñ·ÏÃâ·ÂÇÏ±â() {
+	public void ì‚¬ìš©ìëª©ë¡ì¶œë ¥í•˜ê¸°() {
 		
 		Iterable<User> userAll = userRepo.findAll();
 		
@@ -60,7 +60,7 @@ public class TestLogin {
 	}
 	
 	@Test
-	public void ·Î±×ÀÎÀÎÁõÅ×½ºÆ®_¼º°ø() {
+	public void ë¡œê·¸ì¸ì¸ì¦í…ŒìŠ¤íŠ¸_ì„±ê³µ() {
 
 		LoginResultVo user1Result = loginService.login("user1", "pwd1");
 		
@@ -68,7 +68,7 @@ public class TestLogin {
 	}
 	
 	@Test
-	public void ·Î±×ÀÎÀÎÁõÅ×½ºÆ®_¾ÆÀÌµğÁ¸ÀçÇÏÁö¾ÊÀ½() { 
+	public void ë¡œê·¸ì¸ì¸ì¦í…ŒìŠ¤íŠ¸_ì•„ì´ë””ì¡´ì¬í•˜ì§€ì•ŠìŒ() { 
 		LoginResultVo notExistResult = loginService.login("user12", "pwd1");
 		Assert.assertFalse( notExistResult.isSuccess() );
 		Assert.assertEquals( notExistResult.getResultCode()  , 1 );
@@ -76,7 +76,7 @@ public class TestLogin {
 	
 	
 	@Test
-	public void ·Î±×ÀÎÀÎÁõÅ×½ºÆ®_ÆĞ½º¿öµåÆ²¸²() { 
+	public void ë¡œê·¸ì¸ì¸ì¦í…ŒìŠ¤íŠ¸_íŒ¨ìŠ¤ì›Œë“œí‹€ë¦¼() { 
 		LoginResultVo notExistResult = loginService.login("user1", "wrongPassword");
 		Assert.assertFalse( notExistResult.isSuccess() );
 		Assert.assertEquals( notExistResult.getResultCode()  , 2 );
