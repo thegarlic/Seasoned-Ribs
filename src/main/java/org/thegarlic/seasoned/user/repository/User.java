@@ -1,7 +1,13 @@
 package org.thegarlic.seasoned.user.repository;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import org.thegarlic.seasoned.article.repository.Article;
 
 
 
@@ -18,8 +24,14 @@ public class User {
 	private String userLastname;
 
 	
-//	@Lob
+
 	private byte[] password;
+	
+	@OneToMany( fetch= FetchType.LAZY)
+	private List<Article> articles;
+	
+	
+	
 	
 	public User() {
 		
