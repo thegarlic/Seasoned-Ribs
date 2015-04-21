@@ -27,6 +27,8 @@ public class Article {
 	
 	
 	String title;		// 제목
+	
+	
 	String contents;	// 본문 내용 
 	
 	Date regDate;		// 등록 일자 
